@@ -1,0 +1,22 @@
+.index{
+  text-align: center;
+  height: 400rpx;
+  width:100%;
+  margin:300rpx auto;
+}
+.index image{
+  width: 150rpx;
+  height: 150rpx;
+  vertical-align: middle;
+}
+
+.index .authLogin{
+  margin-top:150rpx;
+}
+.index .nickName{
+  margin-top:50rpx;
+  margin-bottom:50rpx;
+}
+.index .fct{
+  margin-top:25rpx;
+}
