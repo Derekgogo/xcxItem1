@@ -14,31 +14,32 @@ App({
       this.checkToken(token);
       this.globalData.token = token;
     } else {
-      this.login();
+      this._login();
     }
   },
   checkToken(token) {
     wx.request({
+      // url: 'http://xcxitem1.cn:82/api/checkToken',
       url: 'http://blog.cn/api/checkToken',
       header: {
         token
       },
       method: 'post',
-      success: res => {
-
+      success(res) {
         if (res.data.data.msg != 'ok') {
-          this.login();
+          this._login();
         }
       }
     })
   },
-  login() {
+  _login() {
     wx.login({
       success: res => {
         const code = res.code;
         if (code) {
           //发起网络请求
           wx.request({
+            // url: 'http://xcxitem1.cn:82/api/login',
             url: 'http://blog.cn/api/login',
             data: {
               code

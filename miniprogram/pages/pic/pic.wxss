@@ -1,18 +1,46 @@
-.pic{
+.pic {
   text-align: center;
   height: 400rpx;
-  width:100%;
-  margin:300rpx auto;
+  width: 100%;
+  margin: 300rpx auto;
 }
-.pic image{
+
+.pic image {
   width: 300rpx;
   height: 300rpx;
   vertical-align: middle;
 }
 
-.pic .uploadPic{
-  margin-top:25rpx;
+.pic .uploadPic {
+  margin-top: 25rpx;
 }
-.pic .dealPic{
-  margin-top:35rpx;
+
+.pic .dealPic {
+  margin-top: 35rpx;
+}
+
+.pic-type {
+  display: felx;
+  bottom: 0rpx;
+  left: 0rpx;
+  position: fixed;
+  background: white;
+  white-space: nowrap;
+}
+
+.pic-type .pic-list {
+  overflow: hidden;
+  border-radius: 30rpx;
+  margin: 20rpx 20rpx;
+  display: inline-block;
+}
+
+.pic-type .pic-list image {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.current-img-type {
+  border: 2rpx solid red;
+  box-shadow: 2rpx 2rpx 20rpx red;
 }

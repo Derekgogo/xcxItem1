@@ -4,13 +4,13 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    w_avatarUrl:{
-      type:String,
-      value:''
+    w_avatarUrl: {
+      type: String,
+      value: ''
     },
-    w_nickName:{
-      type:String,
-      value:''
+    w_nickName: {
+      type: String,
+      value: ''
     }
   },
 
@@ -18,7 +18,8 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    w_avatarUrl:'',
+    w_nickName:''
   },
 
   /**
@@ -38,10 +39,9 @@ Component({
                 const nickName = res.userInfo.nickName;
                 const avatarUrl = res.userInfo.avatarUrl;
                 that.setData({
-                  nickName: nickName,
-                  avatarUrl: avatarUrl
+                  w_nickName: nickName,
+                  w_avatarUrl: avatarUrl
                 });
-                console.log(that.data.avatarUrl);
                 wx.setStorageSync('nickName', nickName);
                 wx.setStorageSync('avatarUrl', avatarUrl);
               },
@@ -73,7 +73,9 @@ Component({
         }
       })
     },
-    handlePic(){
+
+    //跳转到单页pic
+    handlePic() {
       wx.navigateTo({
         url: '/pages/pic/pic',
       })

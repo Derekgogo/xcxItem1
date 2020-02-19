@@ -6,7 +6,7 @@
   <block wx:if="{{w_avatarUrl}}">
     <view class="nickName">{{w_nickName}}</view>
 
-    <button bind:tap="handlePic" type="primary" class="fct">图片</button>
+    <button bind:tap="handlePic" type="primary" class="fct">大头贴</button>
     <button bind:tap="handleWord" type="primary" class="fct">留言</button>
     <button open-type="share" type="primary" class="fct">分享</button>
   </block>

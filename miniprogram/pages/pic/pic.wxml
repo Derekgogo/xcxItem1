@@ -1,5 +1,16 @@
 <view class="pic">
   <image show-menu-by-longpress src="{{imgUrl?imgUrl:'/asset/pic/addPic.png'}}"></image>
+
   <button class="uploadPic" type="primary" bind:tap="uploadPic">上传图片</button>
   <button class="dealPic" type="primary" bind:tap="dealPic">处理图片</button>
+
 </view>
+
+<scroll-view class="pic-type" scroll-x>
+  <block wx:for="{{imgType}}" wx:key="index">
+    <view class="pic-list {{currentTargetImgType!=index?currentTargetImgType:'current-img-type'}}" bind:tap="handleTarget" data-id="{{index}}">
+      <image src="{{item}}"></image>
+    </view>
+  </block>
+
+</scroll-view>
