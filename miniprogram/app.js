@@ -18,6 +18,7 @@ App({
     }
   },
   checkToken(token) {
+    const that = this;
     wx.request({
       // url: 'http://xcxitem1.cn:82/api/checkToken',
       url: 'http://blog.cn/api/checkToken',
@@ -27,7 +28,7 @@ App({
       method: 'post',
       success(res) {
         if (res.data.data.msg != 'ok') {
-          this._login();
+          that._login();
         }
       }
     })
